@@ -8,9 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Hilleroed Sejlklub Library">
+      <HintPath>..\..\Library\Hilleroed Sejlklub Library\bin\Debug\net8.0\Hilleroed Sejlklub Library.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
