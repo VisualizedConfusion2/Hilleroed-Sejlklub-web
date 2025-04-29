@@ -1,3 +1,5 @@
+using Hilleroed_Sejlklub_Library.Repos;
+using Hilleroed_Sejlklub_Library.Services;
 namespace Hilleroed_Sejlklub_web
 {
     public class Program
@@ -5,6 +7,8 @@ namespace Hilleroed_Sejlklub_web
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddSingleton<BoatRepo, JsonRepo>();
+            builder.Services.AddSingleton<BoatService>();
 
             // Add services to the container.
             builder.Services.AddRazorPages();

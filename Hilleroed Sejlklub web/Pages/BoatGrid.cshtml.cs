@@ -1,4 +1,7 @@
 using Hilleroed_Sejlklub_Library;
+using Hilleroed_Sejlklub_Library.Models;
+using Hilleroed_Sejlklub_Library.Repos;
+using Hilleroed_Sejlklub_Library.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Drawing.Text;
@@ -7,15 +10,20 @@ namespace Hilleroed_Sejlklub_web.Pages
 {
     public class BoatGridModel : PageModel
     {
-        public void OnGet()
-        {
-            private readonly BoatService _bs;
+        private readonly BoatService _bs;
+
         [BindProperty]
-        public List<Boat> Boats {get;set;}
+        public List<Boat> Boats { get; set; }
+
         public BoatGridModel(BoatService bs)
         {
-            Boats = bs.GetAll();
+            _bs = bs;
+            Boats = _bs.GetAll();
         }
+
+        public void OnGet()
+        {
+            // Logic for OnGet can be added here if needed  
         }
-    }
+    } // Ensure this closing brace matches the class definition  
 }
