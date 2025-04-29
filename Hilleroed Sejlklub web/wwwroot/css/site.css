@@ -1,5 +1,11 @@
 html {
   font-size: 14px;
+
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: black !important;
 }
 
 @media (min-width: 768px) {
