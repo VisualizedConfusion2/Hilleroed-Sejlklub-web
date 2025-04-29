@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hilleroed Sejlklub web", "Hilleroed Sejlklub web\Hilleroed Sejlklub web.csproj", "{01CF5B9F-7479-4F25-BCC0-0255F6851EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hilleroed Sejlklub Library", "..\Hilleroed Sejlklub Library\Hilleroed Sejlklub Library\Hilleroed Sejlklub Library.csproj", "{C9F97A12-5927-2F4A-F85E-6BC3664111E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{01CF5B9F-7479-4F25-BCC0-0255F6851EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01CF5B9F-7479-4F25-BCC0-0255F6851EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01CF5B9F-7479-4F25-BCC0-0255F6851EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F97A12-5927-2F4A-F85E-6BC3664111E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F97A12-5927-2F4A-F85E-6BC3664111E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F97A12-5927-2F4A-F85E-6BC3664111E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F97A12-5927-2F4A-F85E-6BC3664111E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
