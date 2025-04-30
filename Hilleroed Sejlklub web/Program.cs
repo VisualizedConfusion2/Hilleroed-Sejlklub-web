@@ -1,4 +1,6 @@
-namespace Hilleroed_Sejlklub_web
+using Hilleroed_Sejlklub_Library.Models;
+using Hilleroed_Sejlklub_Library.Services;
+namespace Hilleroed_Sejlklub_web 
 {
     public class Program
     {

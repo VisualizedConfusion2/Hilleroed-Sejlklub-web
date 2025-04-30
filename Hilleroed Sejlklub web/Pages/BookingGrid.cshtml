@@ -2,3 +2,12 @@
 @model Hilleroed_Sejlklub_web.Pages.BookingGridModel
 @{
 }
+<main>
+	<h1>TEST JSON</h1>
+	<form method="post">
+		<input type="text" name="Name" asp-for=".Name" placeholder="Navn" />
+		<input type="text" name="Desciption" asp-for=".Description" placeholder="Beskrivelse" />
+		<input type="number" name="Age" asp-for=".Age" placeholder="Alder" />
+		<input type="submit" value="Gem" />
+	</form>
+</main>
