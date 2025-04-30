@@ -1,13 +1,64 @@
-﻿@page
-@model Hilleroed_Sejlklub_web.Pages.BookingGridModel
-@{
-}
-<main>
-	<h1>TEST JSON</h1>
-	<form method="post">
-		<input type="text" name="Name" asp-for=".Name" placeholder="Navn" />
-		<input type="text" name="Desciption" asp-for=".Description" placeholder="Beskrivelse" />
-		<input type="number" name="Age" asp-for=".Age" placeholder="Alder" />
-		<input type="submit" value="Gem" />
-	</form>
-</main>
+﻿    @page
+    @model Hilleroed_Sejlklub_web.Pages.BookingGridModel
+    @{
+    <!DOCTYPE html>
+    <html lang="da">
+    <head>
+        <meta charset="UTF-8">
+        <title>Member Grid - Hillerød Sejlklub</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+             <link rel="stylesheet" href="~/css/Rooms.css" />
+    </head>
+    <body>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card__bg"></div>
+                <img src="~/img/Havn.jpg" alt="Sejlklub billede" class="img-fluid rounded card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Navn</h5>
+                <p class="card-text">Beskrivelse: ???<br>Antal personer: 9</p>
+                <a href="#" class="card__btn">Book</a>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card__bg"></div>
+            <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Medlem">
+            <div class="card-body">
+                <h5 class="card-title">Navn</h5>
+                <p class="card-text">Beskrivelse: ???<br>Antal personer: 9</p>
+                <a href="#" class="card__btn">Book</a>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card__bg"></div>
+            <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Medlem">
+            <div class="card-body">
+                <h5 class="card-title">Navn</h5>
+                <p class="card-text">Beskrivelse: ???<br>Antal personer: 9</p>
+                <a href="#" class="card__btn">Book</a>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card__bg"></div>
+            <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Medlem">
+            <div class="card-body">
+                <h5 class="card-title">Navn</h5>
+                <p class="card-text">Beskrivelse: ???<br>Antal personer: 9</p>
+                <a href="#" class="card__btn">Book</a>
+            </div>
+        </div>
+
+    </div>
+
+    </body>
+    </html>
+
+    }
