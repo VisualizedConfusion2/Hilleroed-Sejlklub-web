@@ -1,0 +1,24 @@
+[
+    {
+        "Name": "Sea Breeze",
+        "BoatId": 1,
+        "Model": "SB-200",
+        "Type": "Sailboat",
+        "SailType": "Sloop",
+        "Motor": "None",
+        "Measurement": "30ft",
+        "Year": "2018",
+        "Usable": true
+    },
+    {
+        "Name": "Wave Runner",
+        "BoatId": 2,
+        "Model": "WR-450",
+        "Type": "Motorboat",
+        "SailType": "None",
+        "Motor": "Yamaha 150HP",
+        "Measurement": "20ft",
+        "Year": "2021",
+        "Usable": false
+    }
+]
