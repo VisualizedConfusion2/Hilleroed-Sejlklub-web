@@ -10,14 +10,15 @@ namespace Hilleroed_Sejlklub_web.Pages
 {
     public class BoatGridModel : PageModel
     {
-        private readonly BoatService _bs;
+        private BoatService _bs;
         [BindProperty]
         public List<Boat> Boats { get; set; }
+
 
         public BoatGridModel(BoatService bs)
         {
             _bs = bs;
-            Boats = _bs.Get();
+            Boats = bs.Get();
         }
 
         //Logic for OnGet can be added here if needed

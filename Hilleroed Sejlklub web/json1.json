@@ -20,5 +20,16 @@
         "Measurement": "20ft",
         "Year": "2021",
         "Usable": false
+    },
+    {
+        "Name": "Wave Runner2",
+        "BoatId": 3,
+        "Model": "WR-450",
+        "Type": "Motorboat",
+        "SailType": "None",
+        "Motor": "Yamaha 150HP",
+        "Measurement": "20ft",
+        "Year": "2021",
+        "Usable": false
     }
 ]
