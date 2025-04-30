@@ -1,6 +1,12 @@
 ﻿@page
-@model Hilleroed_Sejlklub_web.Pages.BoatGridModel
-@{
+namespace Hilleroed_Sejlklub_web.Pages
+{
+    public class BoatGridModel : PageModel
+    {
+        public List<Boat>
+    Boats { get; set; }
+    public List<Booking>
+        Bookings { get; set; }
 
 }
 @foreach (var boat in Model.Boats)
