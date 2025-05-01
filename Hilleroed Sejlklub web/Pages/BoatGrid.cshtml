@@ -1,9 +1,11 @@
 ﻿@page
+@using System.Diagnostics;
 @model Hilleroed_Sejlklub_web.Pages.BoatGridModel
 @{
 }
 @foreach (var boat in Model.Boats)
 {
+	Debug.WriteLine($"Boat Name: {boat.Name}");
 	<div>
 		<div class="card">
 			<div class="card__bg"></div>
@@ -15,5 +17,4 @@
 			</div>
 		</div>
 	</div>
-
 }

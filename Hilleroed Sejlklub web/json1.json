@@ -1,35 +1,16 @@
 [
-    {
-        "Name": "Sea Breeze",
-        "BoatId": 1,
-        "Model": "SB-200",
-        "Type": "Sailboat",
-        "SailType": "Sloop",
-        "Motor": "None",
-        "Measurement": "30ft",
-        "Year": "2018",
-        "Usable": true
-    },
-    {
-        "Name": "Wave Runner",
-        "BoatId": 2,
-        "Model": "WR-450",
-        "Type": "Motorboat",
-        "SailType": "None",
-        "Motor": "Yamaha 150HP",
-        "Measurement": "20ft",
-        "Year": "2021",
-        "Usable": false
-    },
-    {
-        "Name": "Wave Runner2",
-        "BoatId": 3,
-        "Model": "WR-450",
-        "Type": "Motorboat",
-        "SailType": "None",
-        "Motor": "Yamaha 150HP",
-        "Measurement": "20ft",
-        "Year": "2021",
-        "Usable": false
-    }
+  {
+    "Name": "b\u00F8rge",
+    "MemberID": 0,
+    "ContactInfo": "123213213",
+    "Birthday": "1765-12-01T00:00:00",
+    "Gender": "Mursten"
+  },
+  {
+    "Name": "Trampe",
+    "MemberID": 0,
+    "ContactInfo": "112",
+    "Birthday": "1212-12-12T00:00:00",
+    "Gender": "Trampolin"
+  }
 ]
