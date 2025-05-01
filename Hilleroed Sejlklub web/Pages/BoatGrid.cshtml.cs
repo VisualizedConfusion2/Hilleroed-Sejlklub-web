@@ -5,12 +5,13 @@ using Hilleroed_Sejlklub_Library.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Drawing.Text;
+using System.Diagnostics;
 
 namespace Hilleroed_Sejlklub_web.Pages
 {
     public class BoatGridModel : PageModel
     {
-        private BoatService _bs;
+        public BoatService _bs;
         [BindProperty]
         public List<Boat> Boats { get; set; }
 
