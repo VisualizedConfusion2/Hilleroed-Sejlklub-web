@@ -3,9 +3,17 @@
 @model Hilleroed_Sejlklub_web.Pages.BoatGridModel
 @{
 }
+<h2>Både</h2>
+<p>Antal både: @Model.Boats?.Count</p>
+<div>
+	@foreach (var boat in Model.Boats)
+	{
+		<p>NAME OF THE BOAT</p>
+	<p>@boat.Name</p>	
+	}
+</div>
 @foreach (var boat in Model.Boats)
 {
-	Debug.WriteLine($"Boat Name: {boat.Name}");
 	<div>
 		<div class="card">
 			<div class="card__bg"></div>

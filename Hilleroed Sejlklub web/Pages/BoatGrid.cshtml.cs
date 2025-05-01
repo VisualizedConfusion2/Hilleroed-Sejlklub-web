@@ -6,26 +6,101 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Drawing.Text;
 using System.Diagnostics;
+using System.Text.Json;
+using System.Numerics;
 
 namespace Hilleroed_Sejlklub_web.Pages
 {
     public class BoatGridModel : PageModel
     {
-        public BoatService _bs;
-        [BindProperty]
-        public List<Boat> Boats { get; set; }
+        public List<Boat> Boats { get; set; } = new();
 
+        private readonly string boatFilePathJson;
 
-        public BoatGridModel(BoatService bs)
+        public BoatGridModel(IWebHostEnvironment environment)
         {
-            _bs = bs;
-            Boats = bs.Get();
+            boatFilePathJson = Path.Combine(environment.ContentRootPath, "BoatData.json");
+            Debug.WriteLine($"Boat file path: {boatFilePathJson}"); // Log the file path for debugging
         }
-
-        //Logic for OnGet can be added here if needed
         public void OnGet()
         {
+            Debug.WriteLine("OnGet method started.");
 
+            // Check if the file exists
+            Debug.WriteLine($"Checking if file exists: {boatFilePathJson}");
+            if (System.IO.File.Exists(boatFilePathJson))
+            {
+                Debug.WriteLine("File found. Reading content...");
+                var json = System.IO.File.ReadAllText(boatFilePathJson);
+
+                // Log the content of the file (optional, avoid for large files)
+                Debug.WriteLine($"File content: {json}");
+
+                if (!string.IsNullOrWhiteSpace(json))
+                {
+                    try
+                    {
+                        // Attempt to deserialize the JSON
+                        Debug.WriteLine("Deserializing JSON...");
+                        Boats = JsonSerializer.Deserialize<List<Boat>>(json) ?? new();
+                        Debug.WriteLine($"Deserialization successful. Loaded {Boats.Count} boats.");
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log the exception
+                        Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
+                        Debug.WriteLine($"Stack Trace: {ex.StackTrace}");
+                        Boats = new();
+                    }
+                }
+                else
+                {
+                    Debug.WriteLine("File content is empty or whitespace.");
+                    Boats = new();
+                }
+            }
+            else
+            {
+                Debug.WriteLine("File not found.");
+                Boats = new();
+            }
+
+            Debug.WriteLine("OnGet method completed.");
         }
-    } //Ensure this closing brace matches the class definition  
+
+
+        //Logic for OnGet can be added here if needed
+        //public void OnGet()
+        //{ 
+
+        //    if (System.IO.File.Exists(boatFilePathJson))
+        //    {
+        //        var json = System.IO.File.ReadAllText(boatFilePathJson);
+
+        //        if (!string.IsNullOrWhiteSpace(json))
+        //        {
+        //            try
+        //            {
+        //                Boats = JsonSerializer.Deserialize<List<Boat>>(json) ?? new();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                // Log evt. fejl
+        //                Debug.WriteLine($"Error deserializing JSON: {ex}");
+        //                Boats = new();
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Boats = new();
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Boats = new();
+        //    }
+
+
+        //}
+    }
 }
