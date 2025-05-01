@@ -1,28 +1,59 @@
 ﻿@page
 @using System.Diagnostics;
 @model Hilleroed_Sejlklub_web.Pages.BoatGridModel
-@{
-}
-<h2>Både</h2>
-<p>Antal både: @Model.Boats?.Count</p>
-<div>
-	@foreach (var boat in Model.Boats)
-	{
-		<p>NAME OF THE BOAT</p>
-	<p>@boat.Name</p>	
-	}
-</div>
-@foreach (var boat in Model.Boats)
-{
-	<div>
-		<div class="card">
-			<div class="card__bg"></div>
-			<img src="~/img/Havn.jpg" alt="Sejlklub billede" class="img-fluid rounded card-img-top">
-			<div class="card-body">
-				<h5 class="card-title">@boat.Name</h5>
-				<p class="card-text">Modeltype: @boat.Model<br>Antal personer: @boat.Type</p>
-				<a href="#" class="card__btn">Book</a>
-			</div>
-		</div>
-	</div>
-}
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Grid - Hillerød Sejlklub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/Rooms.css" />
+</head>
+<body>
+    <div class="container">
+        @foreach (var boat in Model.Boats)
+        {
+            Debug.WriteLine($"Boat Name: {boat.Name}");
+            Debug.WriteLine($"Boat Name: {boat.Model}");
+
+            <div class="card">
+                <div class="card__bg">
+                    <img src="~/img/Havn.jpg" alt="Sejlklub billede" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">@boat.Name</h5>
+                        <p class="card-text">Mål: @boat.Measurement<br />Antal personer: @boat.Type</p>
+
+                        <!-- Book-knap der åbner modal -->
+                        <button type="button"
+                                class="card__btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#bekraeftModal"
+                                data-boat="@boat.Name">
+                            Book
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="modal fade" id="bekraeftModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Bekræft Reservation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Luk"></button>
+                    </div>
+                    <div class="modal-body" id="modalBodyText">
+                        Er du sikker på, at du vil reservere båden?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                        <button type="button" class="btn btn-primary" id="bekraeftKnap">Bekræft</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

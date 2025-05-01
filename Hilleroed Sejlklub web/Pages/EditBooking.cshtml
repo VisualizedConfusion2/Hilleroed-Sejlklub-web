@@ -1,4 +1,33 @@
 ﻿@page
 @model Hilleroed_Sejlklub_web.Pages.EditBookingModel
 @{
+
+    @if (Model.Bookings!.Count == 0)
+    {
+        <h4 class="mb-4 text-warning">Du har ingen bookinger bror</h4>
+    }
+    else
+    {
+        <table class="table table-bordered text-white">
+            <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Kommentar</th>
+                    <th>Start</th>
+                    <th>Slut</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var booking in Model.Bookings)
+                {
+                    <tr>
+                        <td>@booking.</td>
+                        <td>@booking.</td>
+                        <td>@booking.</td>
+                        <td>@booking.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
 }

@@ -10,6 +10,10 @@ namespace Hilleroed_Sejlklub_web.Pages
         [BindProperty]
         public string Name { get; set; }
 
+
+        [BindProperty]
+        public int MemberID { get; set; }
+
         [BindProperty]
         public string ContactInfo { get; set; }
 
@@ -35,10 +39,13 @@ namespace Hilleroed_Sejlklub_web.Pages
             var newMember = new Member
             {
                 Name = Name,
+                MemberID = MemberID,
                 ContactInfo = ContactInfo,
                 Birthday = BirthDay,
                 Gender = Gender
             };
+
+
 
             List<Member> members = new List<Member>();
 
