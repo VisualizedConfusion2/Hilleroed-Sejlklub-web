@@ -1,19 +1,30 @@
 ﻿@page
 @model Hilleroed_Sejlklub_web.Pages.BoatGridModel
 @{
-}
-@foreach (var boat in Model.Boats)
-{
-	<div>
-		<div class="card">
-			<div class="card__bg"></div>
-			<img src="~/img/Havn.jpg" alt="Sejlklub billede" class="img-fluid rounded card-img-top">
-			<div class="card-body">
-				<h5 class="card-title">@boat.Name</h5>
-				<p class="card-text">Modeltype: @boat.Model<br>Antal personer: @boat.Type</p>
-				<a href="#" class="card__btn">Book</a>
-			</div>
-		</div>
-	</div>
-
+	<head>
+		<meta charset="UTF-8">
+		<title>Member Grid - Hillerød Sejlklub</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="~/css/Rooms.css" />
+	</head>
+    <div class="container">
+        @foreach (var boat in Model.Boats)
+        {
+            <div class="card">
+                <div class="card__bg">
+                    <img src="~/img/Havn.jpg"
+                         alt="Sejlklub billede"
+                         class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">@boat.Name</h5>
+                        <p class="card-text">
+                            Modeltype: @boat.Model<br>
+                            Antal personer: @boat.Type
+                        </p>
+                        <a href="#" class="card__btn">Book</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 }
