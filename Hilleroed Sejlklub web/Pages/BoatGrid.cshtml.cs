@@ -67,40 +67,5 @@ namespace Hilleroed_Sejlklub_web.Pages
 
             Debug.WriteLine("OnGet method completed.");
         }
-
-
-        //Logic for OnGet can be added here if needed
-        //public void OnGet()
-        //{ 
-
-        //    if (System.IO.File.Exists(boatFilePathJson))
-        //    {
-        //        var json = System.IO.File.ReadAllText(boatFilePathJson);
-
-        //        if (!string.IsNullOrWhiteSpace(json))
-        //        {
-        //            try
-        //            {
-        //                Boats = JsonSerializer.Deserialize<List<Boat>>(json) ?? new();
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                // Log evt. fejl
-        //                Debug.WriteLine($"Error deserializing JSON: {ex}");
-        //                Boats = new();
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Boats = new();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Boats = new();
-        //    }
-
-
-        //}
     }
 }

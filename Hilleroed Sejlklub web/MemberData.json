@@ -1,0 +1,72 @@
+[
+  {
+    "Name": "Børge",
+    "MemberID": 0,
+    "ContactInfo": "123213213",
+    "Birthday": "1765-12-01T00:00:00",
+    "Gender": "Mursten"
+  },
+  {
+    "Name": "Anna",
+    "MemberID": 1,
+    "ContactInfo": "211334455",
+    "Birthday": "1990-06-15T00:00:00",
+    "Gender": "Kvinde"
+  },
+  {
+    "Name": "Jens",
+    "MemberID": 2,
+    "ContactInfo": "99887766",
+    "Birthday": "1985-03-22T00:00:00",
+    "Gender": "Mand"
+  },
+  {
+    "Name": "Fatima",
+    "MemberID": 3,
+    "ContactInfo": "44556677",
+    "Birthday": "2001-09-10T00:00:00",
+    "Gender": "Kvinde"
+  },
+  {
+    "Name": "Lars",
+    "MemberID": 4,
+    "ContactInfo": "11223344",
+    "Birthday": "1970-01-01T00:00:00",
+    "Gender": "Mand"
+  },
+  {
+    "Name": "Niels",
+    "MemberID": 5,
+    "ContactInfo": "55667788",
+    "Birthday": "2005-12-31T00:00:00",
+    "Gender": "Mand"
+  },
+  {
+    "Name": "Mette",
+    "MemberID": 6,
+    "ContactInfo": "77889900",
+    "Birthday": "1995-05-20T00:00:00",
+    "Gender": "Kvinde"
+  },
+  {
+    "Name": "Ole",
+    "MemberID": 7,
+    "ContactInfo": "66778899",
+    "Birthday": "1982-07-07T00:00:00",
+    "Gender": "Mand"
+  },
+  {
+    "Name": "Sara",
+    "MemberID": 8,
+    "ContactInfo": "44332211",
+    "Birthday": "2000-11-11T00:00:00",
+    "Gender": "Kvinde"
+  },
+  {
+    "Name": "Kasper",
+    "MemberID": 9,
+    "ContactInfo": "99998888",
+    "Birthday": "1998-04-04T00:00:00",
+    "Gender": "Mand"
+  }
+]

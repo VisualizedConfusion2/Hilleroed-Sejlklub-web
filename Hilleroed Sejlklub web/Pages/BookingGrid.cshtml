@@ -1,6 +1,6 @@
 ﻿    @page
     @model Hilleroed_Sejlklub_web.Pages.BookingGridModel
-    @{
+    
     <!DOCTYPE html>
     <html lang="da">
     <head>
@@ -9,76 +9,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
              <link rel="stylesheet" href="~/css/Rooms.css" />
     </head>
-    <body>
 
+    <body>
+		@foreach (var booking in Model.Bookings)
+        {
         <div class="container">
         <div class="card">
             <div class="card__bg">
-                <img src="~/img/Havn.jpg"
-                     alt="Sejlklub billede"
-                     class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">Name</h5>
+                    <h5 class="card-title">Booking nummer: @booking.BookingID</h5>
                     <p class="card-text">
-                        Modeltype:Model<br>
-                        Antal personer: Type
+                        <p class="card-text">Tidspunkt for booking: @booking.TimeOfBooking<br />Hvor er vi: @booking.Location</p>
                     </p>
-                    <a href="#" class="card__btn">Book</a>
                 </div>
             </div>
         </div>
 
-            <div class="card">
-                <div class="card__bg">
-                    <img src="~/img/Havn.jpg"
-                         alt="Sejlklub billede"
-                         class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Name</h5>
-                        <p class="card-text">
-                            Modeltype:Model<br>
-                            Antal personer: Type
-                        </p>
-                        <a href="#" class="card__btn">Book</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card__bg">
-                    <img src="~/img/Havn.jpg"
-                         alt="Sejlklub billede"
-                         class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Name</h5>
-                        <p class="card-text">
-                            Modeltype:Model<br>
-                            Antal personer: Type
-                        </p>
-                        <a href="#" class="card__btn">Book</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card__bg">
-                    <img src="~/img/Havn.jpg"
-                         alt="Sejlklub billede"
-                         class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Name</h5>
-                        <p class="card-text">
-                            Modeltype:Model<br>
-                            Antal personer: Type
-                        </p>
-                        <a href="#" class="card__btn">Book</a>
-                    </div>
-                </div>
-            </div>
-
     </div>
-
-    </body>
-    </html>
-
-    }
+}
+</body>
+</html>
+    
+    

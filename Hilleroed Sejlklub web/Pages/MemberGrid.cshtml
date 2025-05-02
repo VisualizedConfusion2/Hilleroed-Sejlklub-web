@@ -1,4 +1,48 @@
 ﻿@page
 @model Hilleroed_Sejlklub_web.Pages.MemberGridModel
-@{
-}
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Grid - Hillerød Sejlklub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/Rooms.css" />
+</head>
+<body>
+    <div class="container">
+   @if (Model.Members!.Count == 0)
+        {
+                <h4 class="mb-4 text-warning">Der er ingen medlemmer</h4>
+        }
+        else
+        {
+            <table class="table table-bordered text-black">
+                <thead>
+                    <tr>
+                        <th>Navn</th>
+                        <th>Kontakt info</th>
+                        <th>Fødselsdag</th>
+                        <th>Køn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var member in Model.Members)
+                    {
+                        <tr>
+                            <td>@member.Name</td>
+                            <td>@member.ContactInfo</td>
+                            <td>@member.Birthday</td>
+                            <td>@member.Gender</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+
+
+</body>
+</html>
+ 
