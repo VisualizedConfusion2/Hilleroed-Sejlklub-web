@@ -8,7 +8,8 @@
         "Motor": "None",
         "Measurement": "30ft",
         "Year": "2018",
-        "Usable": true
+        "Usable": true,
+        "Image": "sejlbåd1.jpg"
     },
     {
         "Name": "Wave Runner",
@@ -19,7 +20,8 @@
         "Motor": "Yamaha 150HP",
         "Measurement": "20ft",
         "Year": "2021",
-        "Usable": false
+        "Usable": false,
+        "Image": "sejlbåd2.jpg"
     },
     {
         "Name": "Wave Runner II",
@@ -30,6 +32,7 @@
         "Motor": "Yamaha 150HP",
         "Measurement": "20ft",
         "Year": "2021",
-        "Usable": true
+        "Usable": true,
+        "Image": "sejlbåd4.jpg"
     }
 ]
